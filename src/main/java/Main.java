@@ -22,7 +22,7 @@ public class Main {
         String reference = as.central(strings, lsh);
 
         // The alphabet is appended to the reference string.
-        // Otherwise errors may when compressing a string which contains characters that are not in the reference string.
+        // Otherwise errors may occur when compressing a string which contains characters that are not in the reference string.
         reference += alphabet;
 
         CompressedStringList list = new CompressedStringList(reference);
