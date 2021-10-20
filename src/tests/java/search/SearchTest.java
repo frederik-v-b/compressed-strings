@@ -4,7 +4,7 @@ import main.java.search.ApproximateSearch;
 import main.java.search.LSH;
 import org.junit.Test;
 
-import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.*;
 
 public class SearchTest {
 
@@ -51,5 +51,20 @@ public class SearchTest {
         LSH lsh = new LSH(4, 4);
         ApproximateSearch as = new ApproximateSearch();
         assertEquals(as.central(strings, lsh), "cccc");
+    }
+
+    @Test
+    public void errorOnZeroStrings()
+    {
+        String[] strings = {};
+        LSH lsh = new LSH(4, 4);
+        ApproximateSearch as = new ApproximateSearch();
+        boolean failed = false;
+        try{
+            String x = as.central(strings, lsh);
+        }catch (Exception e){
+            failed = true;
+        }
+        assertTrue(failed);
     }
 }

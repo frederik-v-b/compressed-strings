@@ -39,7 +39,7 @@ public class LSH {
      */
     public String hash(String str)
     {
-        if (str.length() != range)
+        if (str.length() < range)
             throw new IllegalArgumentException("String must be at least of length " + range + ".");
 
         StringBuilder builder = new StringBuilder();
