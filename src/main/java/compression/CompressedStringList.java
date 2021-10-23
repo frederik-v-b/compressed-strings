@@ -72,7 +72,7 @@ public class CompressedStringList {
     }
 
     /**
-     * Adds multiple strings.
+     * Checks if a string is contained in the list.
      */
     public boolean contains(String str)
     {
